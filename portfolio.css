@@ -1,0 +1,287 @@
+/***** GENERAL STYLING *****/
+body {
+    margin: 0; /* Removes default margin */
+    background-color: #fefefe; /* Sets background color to a light gray */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sets a modern sans-serif font */
+}
+
+/* Main Heading */
+h1 {
+    text-transform: uppercase; /* Makes the text uppercase */
+    font-family: 'Georgia', serif; /* Uses serif font for the heading */
+    text-align: center; /* Centers the text */
+    margin-top: 3%; /* Adds top margin */
+    color: #3a3a3a; /* Sets text color to dark gray */
+    letter-spacing: 2px; /* Adds spacing between letters */
+}
+
+h1:hover {
+    filter: brightness(110%); /* Increases brightness when hovering */
+    transform: scale(1.08); /* Slightly enlarges the text */
+    transition: transform 0.8s; /* Smooth transition for scale */
+}
+
+/* Paragraphs */
+p {
+    font-family: 'Verdana', sans-serif; /* Uses sans-serif font for paragraphs */
+    text-align: justify; /* Justifies the text */
+    font-size: 18px; /* Sets font size */
+    color: #444; /* Sets text color */
+    line-height: 1.6; /* Increases line height for readability */
+    padding: 0 25px; /* Adds horizontal padding */
+}
+
+p:hover {
+    transform: scale(1.02); /* Slightly enlarges the paragraph on hover */
+    transition: transform 0.5s; /* Smooth transition for scale */
+}
+
+/* Center Class */
+.center {
+    text-align: center; /* Centers text */
+    color: #005577; /* Sets text color */
+}
+
+.center:hover {
+    transform: scale(1.05); /* Slightly enlarges the text on hover */
+    transition: transform 1s; /* Smooth transition for scale */
+}
+
+/* Links */
+a {
+    color: #0066cc; /* Sets link color to blue */
+    text-decoration: none; /* Removes underlines from links */
+}
+
+a:hover {
+    color: #004499; /* Darker blue on hover */
+}
+
+/* Quotes */
+q {
+    font-style: italic; /* Makes quotes italic */
+    color: #777; /* Sets color to light gray */
+}
+
+/* Images */
+img {
+    border-radius: 10px; /* Adds rounded corners to images */
+    max-width: 80%; /* Limits the maximum width */
+    height: 290px; /* Sets fixed height */
+    display: block; /* Makes images block-level elements */
+    margin: 20px auto; /* Centers images and adds margin */
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2); /* Adds a subtle shadow */
+}
+
+.Column_2 img {
+    max-width: 450px; /* Sets max-width for images in .Column_2 */
+    height: 350px; /* Maintains aspect ratio */
+    margin: 20px auto; /* Centers images and adds margin */
+}
+
+img:hover {
+    filter: none; /* Removes any filter */
+    transform: scale(1.05); /* Enlarges image slightly on hover */
+    transition: all 0.5s ease-in-out; /* Smooth transition for scaling */
+}
+
+@media screen and (max-width: 576px) {
+    img {
+        height: 120px; /* Adjusts image height for smaller screens */
+        margin-top: 50px; /* Adds margin on top */
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #ddd; /* Light gray background */
+    text-align: center; /* Centers the footer text */
+    padding: 20px; /* Adds padding */
+    font-size: 14px; /* Sets font size */
+    color: #333; /* Sets text color */
+}
+
+/***** NAVBAR *****/
+.Navbar {
+    background-color: #003344; /* Dark blue background */
+    overflow: hidden; /* Prevents overflow */
+    position: fixed; /* Fixes navbar at the top */
+    top: 0; /* Aligns at the top */
+    width: 100%; /* Makes the navbar span the full width */
+    z-index: 999; /* Keeps navbar on top of other elements */
+    animation: fadeInNav 2s; /* Applies fade-in animation */
+}
+
+@keyframes fadeInNav {
+    from {opacity: 0;} /* Starts with opacity 0 */
+    to {opacity: 1;} /* Ends with opacity 1 */
+}
+
+.Navbar a {
+    float: left; /* Aligns navbar links to the left */
+    display: block; /* Makes each link a block-level element */
+    color: white; /* Sets text color to white */
+    padding: 14px 20px; /* Adds padding around the links */
+    font-size: 18px; /* Sets font size */
+    font-family: 'Segoe UI', sans-serif; /* Sets font */
+    text-align: center; /* Centers the text */
+}
+
+.Navbar a:hover {
+    background-color: #4fb3bf; /* Changes background color on hover */
+    color: #fff; /* Changes text color to white */
+    font-weight: bold; /* Makes text bold */
+    transition: background-color 0.5s ease; /* Smooth transition for background color */
+}
+
+.Navbar a.active {
+    background-color: #00b894; /* Sets active link background color */
+}
+
+/***** COLUMNS *****/
+.Row {
+    display: flex; /* Uses flexbox layout */
+    flex-wrap: wrap; /* Allows wrapping of items */
+    justify-content: space-between; /* Spaces items evenly */
+    padding: 15px; /* Adds padding */
+}
+
+.Column_1, .Column_2 {
+    flex: 0 0 48%; /* Makes columns take 48% of the width */
+    height: 400px; /* Sets fixed height */
+    padding: 15px; /* Adds padding */
+}
+
+.Column_1 {
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+.Column_2 {
+    background-color: #cfd8dc; /* Light blue-gray background */
+    color: #222; /* Dark text color */
+}
+
+.Column_2 img.contact-image {
+    width: 100%; /* Sets image width to 100% */
+    max-width: 500px; /* Limits max width */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); /* Adds shadow */
+    margin-top: 50px; /* Adds top margin */
+}
+
+.Column_tall {
+    height: 450px; /* Taller column height */
+}
+
+@media screen and (max-width: 768px) {
+    .Column_1, .Column_2 {
+        flex: 0 0 100%; /* Makes columns take full width on small screens */
+        margin-bottom: 20px; /* Adds margin between columns */
+    }
+}
+
+/***** FORM STYLING *****/
+form {
+    background-color: #eeeeee; /* Light gray background */
+    padding: 20px; /* Adds padding */
+    border-radius: 8px; /* Rounds the corners */
+    font-family: 'Georgia', serif; /* Sets serif font */
+}
+
+input[type=text], input[type=email] {
+    width: 100%; /* Makes inputs take full width */
+    padding: 10px; /* Adds padding */
+    margin-top: 8px; /* Adds top margin */
+    margin-bottom: 12px; /* Adds bottom margin */
+    border: 1px solid #ccc; /* Adds border */
+    border-radius: 6px; /* Rounds corners */
+}
+
+input[type=text]:hover {
+    box-shadow: 0 0 6px #00aaff inset; /* Adds inner shadow on hover */
+}
+
+input[type=submit] {
+    background-color: #00796b; /* Sets background color */
+    color: white; /* Sets text color to white */
+    padding: 10px 16px; /* Adds padding */
+    border: none; /* Removes border */
+    border-radius: 6px; /* Rounds corners */
+    cursor: pointer; /* Changes cursor to pointer */
+    display: block; /* Makes it a block-level element */
+    margin: 0 auto; /* Centers the button */
+    font-weight: bold; /* Makes text bold */
+}
+
+input[type=submit]:hover {
+    background-color: #004d40; /* Changes background color on hover */
+    transform: scale(1.1); /* Slightly enlarges the button */
+    transition: 0.4s; /* Smooth transition for scaling */
+}
+
+/* Video Background */
+.video-background {
+    position: relative; /* Makes video container relative for absolute positioning */
+    width: 100%; /* Makes video container take full width */
+    height: 50vh; /* Sets height to 50% of the viewport height */
+    overflow: hidden; /* Hides overflowed content */
+}
+
+.video-background video {
+    width: 100%; /* Makes video span full width */
+    height: 100%; /* Makes video span full height */
+    object-fit: cover; /* Ensures the video covers the area */
+}
+
+#Matrix {
+    position: absolute; /* Positions video absolutely */
+    top: 0; /* Aligns at the top */
+    left: 0; /* Aligns to the left */
+    width: 100%; /* Takes full width */
+    height: 100%; /* Takes full height */
+    object-fit: cover; /* Ensures the video covers the area */
+    z-index: -1; /* Places the video behind other content */
+}
+
+.Video_Text {
+    position: absolute; /* Positions the text absolutely */
+    top: 25%; /* Moves text down 25% of the height */
+    left: 50%; /* Moves text to the center */
+    transform: translate(-50%, -50%); /* Adjusts positioning to truly center */
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    color: white; /* White text color */
+    padding: 40px; /* Adds padding around text */
+    text-align: center; /* Centers the text */
+    z-index: 1; /* Places text above other elements */
+    animation: fadeInUp 2s ease-out; /* Animation for text appearance */
+}
+
+.Video_Text:hover {
+    transform: translate(-50%, -50%); /* Keeps the text centered on hover */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0; /* Starts with opacity 0 */
+        transform: translate(-50%, -60%); /* Starts slightly above */
+    }
+    to {
+        opacity: 1; /* Ends with opacity 1 */
+        transform: translate(-50%, -50%); /* Ends at true center */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .video-background {
+        height: auto; /* Adjusts height for smaller screens */
+    }
+
+    .Video_Text {
+        position: relative; /* Changes text positioning */
+        transform: none; /* Removes translation */
+        top: auto; /* Resets top */
+        left: auto; /* Resets left */
+        background: #000; /* Sets solid black background */
+    }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD Section -->
+<head>
+    <!-- Character encoding for proper text rendering -->
+    <meta charset="utf-8">
+    <!-- Ensures responsive design for different screen sizes -->
+    <meta name="viewport" content="width=device-width" />
+    <!-- Title of the webpage that appears on the browser tab -->
+    <title>Caron Haynes Portfolio</title>
+    <!-- Link to the external CSS file for styling -->
+    <link rel="stylesheet" type="text/css" href="../portfolio-project/portfolio.css">
+</head>
+
+<!-- BODY Section -->
+<body class="Background">
+
+    <!-- NAVBAR Section: Contains navigation links -->
+    <div class="Navbar">
+        <!-- Links to different sections of the page (Home, About, GitHub, Contact) -->
+        <a class="active" href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#GitHub">GitHub</a>
+        <a href="#Contact">Contact</a>
+    </div>
+    <br><br>
+
+    <!-- BACKGROUND VIDEO Section: Full-screen video background for Home -->
+    <div id="Home" class="video-background">
+        <!-- Video element that auto-plays, is muted, and loops -->
+        <video autoplay muted loop id="Matrix">
+            <source src="../portfolio-project/Video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!-- VIDEO TEXT Section: Overlay text on the video background -->
+    <div class="Video_Text">
+        <!-- Heading displaying the name and title -->
+        <h1 class="white-text">Caron Haynes – Aspiring Developer</h1>
+        <strong>
+            <!-- Centered paragraph with a quote -->
+            <p class="center">
+                <q>Code is like poetry — every line has purpose, rhythm, and clarity. The more I write, the more I grow.</q>
+                <br>Hi, I'm Caron. This website is my personal portfolio where I share what I've learned, what I've built, and where I'm headed.
+                <br><br>Thanks for visiting — scroll down and get to know me! 
+            </p>
+        </strong>
+    </div>
+
+    <!-- ABOUT SECTION: Information about me -->
+    <div class="Row" id="About">
+        <div class="Column_2">
+            <!-- Image -->
+            <img src="../portfolio-project/image1.png" alt="VS HTML Code">
+        </div>
+        <div class="Column_1">
+            <!-- Section title -->
+            <h1>About</h1>
+            <!-- Detailed paragraph about me and my journey -->
+            <p>
+                Hey there! I'm a passionate and curious learner on the journey to becoming a full-stack software developer. I come from a background that's far from tech, but I’ve always had a love for solving problems and creating things that help others.
+                <br><br>
+                I’m currently studying web development through <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>, where I’ve gained hands-on experience with HTML, CSS, and Bootstrap so far.
+                Every day, I’m building new skills — and building websites like this one is part of the adventure!
+                <br><br>
+                When I'm not coding, I enjoy gaming, learning about new tech, and spending quality time with family.
+                I'm excited to grow in this field and would love to collaborate on real-world projects. Feel free to reach out through the Contact section below!
+            </p>
+        </div>
+    </div>
+        
+    <!-- GITHUB SECTION: Link to the my GitHub profile and projects -->
+    <div class="Row" id="GitHub">
+        <div class="Column_1">
+            <!-- Section title and description -->
+            <h1>GitHub</h1>
+            <p>
+                Want to see what I've been working on? You can check out my code, projects, and learning progress on my GitHub profile.
+                <br><br>
+                <strong>Check it out here</strong>
+            </p>
+            <!-- Link to GitHub profile -->
+            <p class="center">
+                <a href="https://github.com/Haynes10" target="_blank">Haynes10 GitHub</a>
+            </p>
+        </div>
+        <div class="Column_2">
+            <!-- Image and linked to the GitHub profile -->
+            <a href="https://github.com/Haynes10" target="_blank"><img src="../portfolio-project/image3.png" alt="GitHub"></a>
+        </div>
+    </div>
+        
+   <!-- CONTACT SECTION: Contact form and image -->
+   <div class="Row" id="Contact">
+        <!-- Left column with a contact-related image -->
+        <div class="Column_2 Column_tall">
+            <img src="../portfolio-project/image2.png" alt="Contact Image" class="contact-image">
+        </div>
+
+        <!-- Right column with the contact form -->
+        <div class="Column_1 Column_tall">
+            <h1>Contact</h1>
+            <!-- Form for submitting a contact message -->
+            <form action="" method="POST">
+                <!-- Name input field -->
+                <label>Name:</label>
+                <input type="text" placeholder="Please enter your name here">
+                <!-- Email input field -->
+                <label>Email:</label>
+                <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                <!-- Message input field -->
+                <label>Message:</label>
+                <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                <!-- Submit button -->
+                <input type="submit" value="SUBMIT">
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER SECTION: Footer text displaying copyright information -->
+    <footer>
+        <p class="center">&copy; Caron Haynes Cruz – Built with passion, practice, and pixels.</p>
+    </footer>
+
+</body>
+</html>>
